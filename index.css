@@ -146,6 +146,11 @@ body{
         font-size: 14px;
      }
 
+         .image img {
+             width: 100%;
+             height: auto;
+         }
+
          .image {
              background-color: var(--accent-color);
              opacity: 35%;
