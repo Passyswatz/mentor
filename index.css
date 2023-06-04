@@ -2,8 +2,8 @@
 *{
     margin:0;
     padding:0;
-    
-    
+    box-sizing: border-box;
+  
 }
 
 :root{
@@ -14,155 +14,143 @@
     --para-color:hsla(0, 0%, 100%, 0.75);
     --stat-color:hsla(0, 0%, 100%, 0.6);
 }
-
-
-
 body{
     background-color: var(--main-color);
-    font-size: 15px;
-    font-weight: 400;
-  
+
 }
 
 .container{
-    display:flex;
-    margin:100px;
+   display: flex;
+   align-items: center;
+   border-radius: 10px;
+   overflow:hidden;
+   box-shadow:0 0 10px rgba(0,0,0,0.2);
+   background-color: var(--card-color);
+   margin:50px;
    
-    border-radius: 2%;
-     background-color:var(--card-color);
-     align-items: center;
+    
+
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+    
+   
+}
+
+.image{
+    background-color: var(--accent-color);
+    opacity:35%;
 }
 
 .information{
-    margin: 50px;
-}
-
-h1{
-   
-    color:var(--heading-color);
+    margin:30px;
+    padding: 20px;
+    color: var(--heading-color);
     font-family: "inter", sans-serif;
 }
-h1 > span{
-    color:var(--accent-color)
+
+
+
+.information h2{
+    font-size: 24px;
+    margin-bottom: 30px;
+ 
+    color: var(--heading-color);
+    font-family: "inter", sans-serif;
+    
+}
+.information span {
+    color: var(--accent-color);
 }
 
-p{
-   margin-top: 30px;
+.information p{
+    font-size: 14px;
     color:var(--para-color);
-    font-family:"lexend Deca", sans-serif;
+    margin-bottom: 50px;
+    font-family: "lexend Deca", sans-serif;
+    word-spacing: 3px;
+    
 }
 
-.stat{
-    margin-top:90px;
+.stats{
     display:flex;
     justify-content: space-between;
-    flex-wrap:wrap;
-    color: var(--stat-color);
+   
+    bottom:50px;
+    
+}
  
-}
-
-.stat h1{
-    margin-bottom: 0px;
-}
-.stat p{
-    margin-top: 0px;
-}
-.picture{
-    background-color: var(--accent-color);
-    border-top-right-radius: 2%;
-    border-bottom-right-radius: 2%;
+.stat{
+    flex:1;
    
 }
+.stat h3{
+    font-size: 20px;
+    color:var(--heading-color);
+    padding-bottom: 10px;
+}
 
-.picture img{
-   
-    border-radius: 2%;
-    opacity: 55%;
+.stat p {
+    font-size: 10px;
+    --stat-color: hsla(0, 0%, 100%, 0.6);
+    font-family: "lexend Deca", sans-serif;
+    letter-spacing: 2px;
    
 }
 
 @media screen and (max-width:650px) {
-        body{
-            margin:0;
-            background-color: var(--main-color);
-        }
 
-        .container {
-            flex-direction: column-reverse;
-            justify-content: flex-end;
-            padding:20px;
-            margin: 20px;
-             border-radius: 2%;
-            background-color: var(--card-color);
-            align-items: center;
-           
-        }
+    .container{
+        flex-direction: column-reverse;
+        max-width:350px;
+       
 
-        .picture {
-            background-color: var(--accent-color);
-            border-top-right-radius: 2%;
-            border-top-left-radius: 2%;
-        
+    }
+    .image{
+        width: 100%;
+        height: auto;
+    }
 
-        }
+    .information{
+        padding:24px;
+        text-align: center;
+    }
 
-        .picture img {
-            height: 400px;
-            width: 365px;
-            border-radius: 2%;
-            opacity: 55%;
-            
-           
-            
+    .information h2{
+        font-size: 24px;
+        color:var(--heading-color);
+        margin-bottom: 10px;
+    }
 
-        }
+         .information p {
+             font-size: 14px;
+        margin-bottom: 24px;
+        color: var(--para-color);
+               
+     }
 
-        .information {
-            margin: 50px;
-        }
+     .stats{
+        display: block;
+        justify-content: space-between;
+        flex-wrap: wrap;
+     }
 
-        h1 {
+     .stat h3{
+        font-size: 32px;
+        margin-bottom: 5px;
+     }
 
-            color: var(--heading-color);
-            font-family: "inter", sans-serif;
-        }
+     .stat p{
+        font-size: 14px;
+     }
 
-        h1>span {
-            color: var(--accent-color)
-        }
 
-        p {
-            margin-top: 30px;
-            color: var(--para-color);
-            font-family: "lexend Deca", sans-serif;
-        }
-
-        .stat {
-           
-            margin-top:30px;
-            width: 100%;
-            display:block;
-            text-align: center;
-           
-            color: var(--stat-color);
-
-        }
-     .companies{
-            margin-bottom: 40px;
-        }
-
-        .templates{
-            margin-bottom: 40px;
-        }
-
-        
-
-        .stat h1 {
-            margin-bottom: 0px;
-        }
-
-        .stat p {
-            margin-top: 0px;
-        }
-
+    
 }
+
+
+
+
+
