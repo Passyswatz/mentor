@@ -149,6 +149,9 @@ body{
          .image img {
              width: 100%;
              height: auto;
+            background-color: var(--accent-color);
+                opacity: 35%;
+            }
          }
 
          .image {
